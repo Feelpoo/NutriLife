@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #F4F1EE;
+    padding-top: 60px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    background-color: #007E65;
+    height: 60px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+}
+
+header img {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+}
+
+header > nav {
+    display: flex;
+    background-color: #449A89;
+    border-radius: 25px;
+    height: 36px;
+    padding: 0 28px;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 25px;
+}
+
+header > nav > a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+header > nav > a:hover,
+header > nav > a.ativo {
+    color: #F4F1EE;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.img {
+    height: 55vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.28)), url("../assets/natureza.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 35%;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 100px;
+}
+
+.img > h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    font-size: 52px;
+    font-weight: 900;
+    text-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+.conteudo-contato {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    gap: 50px;
+}
+
+.quest {
+    flex: 1;
+    max-width: 560px;
+}
+
+.quest > h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #007E65;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.faq-item {
+    background-color: #449A89;
+    padding: 18px 24px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: background-color 0.2s ease;
+    overflow-anchor: none;
+}
+
+.faq-item:hover {
+    background-color: #3b897a;
+}
+
+.faq-pergunta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #ffffff;
+    list-style: none;
+}
+
+.faq-pergunta::-webkit-details-marker {
+    display: none;
+}
+
+.icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.15);
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.faq-item[open] .icone {
+    transform: rotate(180deg);
+}
+
+.faq-resposta {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    font-size: 15px;
+    line-height: 1.6;
+    color: #F4F1EE;
+}
+
+.formu {
+    width: 100%;
+    max-width: 480px;
+    background-color: #449A89;
+    font-size: 15px;
+    color: #ffffff;
+    padding: 34px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.formu > h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.formu > label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.formu > input,
+.diva {
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    padding: 12px;
+    font-size: 14px;
+    margin-bottom: 16px;
+    background-color: #ffffff;
+    color: #2c3e3a;
+}
+
+.formu > input {
+    height: 44px;
+}
+
+.diva {
+    height: 125px;
+    margin-bottom: 22px;
+    resize: vertical;
+}
+
+.btt {
+    width: 100%;
+    height: 48px;
+    background: #007E65;
+    border-radius: 8px;
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btt:hover {
+    background: #006652;
+    transform: translateY(-1px);
+}
+
+.btn-whatsapp {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background-color: #25d366;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.icone-whatsapp {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebe5d;
+    transform: translateY(-2px);
+}
+
+.tm {
+    width: 100%;
+    background-color: #007E65;
+    height: 90px;
+    margin-top: 90px;
+    padding: 20px;
+    color: #F4F1EE;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .img {
+        padding-left: 32px;
+    }
+    .img > h1 {
+        font-size: 38px;
+    }
+    .conteudo-contato {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+    }
+    .quest,
+    .formu {
+        max-width: 100%;
+    }
+}

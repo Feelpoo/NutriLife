@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #F4F1EE;
+    padding-top: 60px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    background-color: #007E65;
+    height: 60px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+}
+
+header img {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+}
+
+header > nav {
+    display: flex;
+    background-color: #449A89;
+    border-radius: 25px;
+    height: 36px;
+    padding: 0 28px;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 25px;
+}
+
+header > nav > a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+header > nav > a:hover,
+header > nav > a.ativo {
+    color: #F4F1EE;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.lista-receitas {
+    max-width: 880px;
+    margin: 45px auto 70px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.cabecalho-dicas {
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.cabecalho-dicas h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #007E65;
+    margin-bottom: 8px;
+}
+
+.dica-instrucao {
+    color: #5a6b67;
+    font-size: 15px;
+}
+
+.receita-item {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.receita-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.receita-card {
+    display: flex;
+    align-items: stretch;
+    min-height: 150px;
+    background-color: #449A89;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s ease;
+}
+
+.receita-card:hover {
+    background-color: #3b897a;
+}
+
+.receita-info {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 30px;
+    color: #ffffff;
+    gap: 16px;
+}
+
+.receita-info h2 {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.seta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.15);
+    transition: transform 0.3s ease, background-color 0.2s ease;
+    flex-shrink: 0;
+}
+
+.receita-item.ativo .seta {
+    transform: rotate(180deg);
+    background-color: rgba(255, 255, 255, 0.28);
+}
+
+.receita-foto {
+    width: 260px;
+    flex-shrink: 0;
+    background-color: #007E65;
+    overflow: hidden;
+}
+
+.receita-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.35s ease;
+}
+.receita-detalhes {
+    display: none;
+    padding: 28px 32px;
+    background-color: #ffffff;
+    border-top: 2px solid #e1ede9;
+    color: #2c3e3a;
+}
+
+.receita-item.ativo .receita-detalhes {
+    display: block;
+}
+
+.detalhes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 32px;
+}
+
+.receita-detalhes h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #007E65;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.receita-detalhes ul,
+.receita-detalhes ol {
+    padding-left: 20px;
+    line-height: 1.65;
+    font-size: 15px;
+}
+
+.receita-detalhes li {
+    margin-bottom: 6px;
+}
+
+@media (max-width: 650px) {
+    .receita-card {
+        flex-direction: column-reverse;
+    }
+    .receita-foto {
+        width: 100%;
+        height: 200px;
+    }
+    .detalhes-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
